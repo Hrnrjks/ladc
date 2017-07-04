@@ -3,7 +3,6 @@ var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
-app.use(express.static('public'));
 /*
  app.use(express.static(__dirname + '/public'));
  app.use('/Styles', express.static(__dirname + '/public/Styles'));
@@ -12,8 +11,14 @@ app.use(express.static('public'));
 
 app.get('/', function (req, res)
 {
-    res.send(express.static('public/dhdh.html'));
+    res.sendFile('private/index.html', {root: __dirname});
 });
+app.get('/login', function (req, res)
+{
+    res.sendFile('private/login.html', {root: __dirname});
+});
+
+app.use(express.static('public'));
 
 var users = [];
 var userConn = 'A user has connected';
@@ -36,7 +41,7 @@ io.on('connection', function (socket)
     socket.on('chat message', function (msg)
     {
         //console.log('message: ' + msg);
-        io.emit('chat message', "Anon: " + msg);
+        io.emit('chat message', "Anonas: " + msg);
     });
 
     socket.on('set username', function (data)

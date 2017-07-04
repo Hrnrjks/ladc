@@ -2,15 +2,18 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>LAD Login</title>
+        <title>LAD Communicator 2</title> 
         <link rel="stylesheet" type="text/css" href="Styles/style.css">
         <script src="Scripts/jquery-3.2.1.min.js"></script>
-        <script src="Scripts/scripts.js"></script>
+        <script src="Scripts/script.js"></script>
         <script src="Scripts/socket.io.js"></script>
     </head>
     <body>
-        <form id="login-form" action="">
-            <input id="username" /><button id="login-btn">Login</button>
+        <div id="wrapper">
+            <ul id="messages"></ul>
+        </div>
+        <form id="msg-form" action="">
+            <input id="msg" autocomplete="off" /><button id="send-btn">Send</button>
         </form>
     </body>
 </html>
