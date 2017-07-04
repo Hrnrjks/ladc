@@ -1,0 +1,60 @@
+html, body
+{
+	background-color: #006064;
+	color: #ecf0f1;
+	font-family: sans-serif;
+	margin: 0;
+}
+
+#wrapper
+{
+	height: 100%;
+	width: 100%;
+}
+
+#msg-form
+{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+#msg-form input
+{
+	background-color: #0097A7;
+	border: 0;
+	padding: 10px;
+	width: 90%;
+}
+
+#msg-form button
+{
+	color: #ecf0f1;
+	background-color: #00ACC1;
+	height: 35px;
+	width: calc(10% - 20px);
+	border: none;
+}
+
+#messages
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	height: calc(100vh - 45px);
+	//border: 5px solid red;
+	overflow: hidden;
+	overflow-y: auto;
+	//max-height: 50%;
+}
+
+#messages li
+{
+	background-color: #006064;
+	padding: 5px 10px;
+}
+
+#messages li:nth-child(odd)
+{
+	background: #0097A7;
+}
