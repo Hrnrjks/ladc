@@ -3,13 +3,22 @@
   "version": "1.0.0",
   "description": "LAD Communicator",
   "main": "index.js",
-  "scripts": {"start":"node index.js",
+  "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Vytas Janulis",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.2",
+    "express": "^4.15.3",
     "socket.io": "^2.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hrnrjks/ladc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hrnrjks/ladc/issues"
+  },
+  "homepage": "https://github.com/Hrnrjks/ladc#readme"
 }
